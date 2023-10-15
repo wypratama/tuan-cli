@@ -1,0 +1,46 @@
+targets:
+  # - platform: win32
+  #   arch: x64
+  #   url_template: https://github.com/wypratama/tuan-cli/releases/download/v__VERSION__/recon-x86_64-windows.zip
+  # - platform: linux
+  #   arch: x64
+  #   url_template: https://github.com/wypratama/tuan-cli/releases/download/v__VERSION__/recon-x86_64-linux.tar.xz
+  - platform: darwin
+    arch: x64
+    url_template: https://github.com/wypratama/tuan-cli/releases/download/v__VERSION__/recon-x86_64-macos.tar.xz
+  # - platform: darwin
+  #   arch: x64
+  #   url_template: https://github.com/wypratama/tuan-cli/releases/download/v__VERSION__/recon-aarch64-macos.tar.xz
+
+# provider: npm
+# both recon-root.json and recon-sub.json paths are relative to working folder
+npm:
+  publish: true # dont publish to npm, just generate the packages on disk
+  org: "@wypratama"
+  name: tuan-cli
+  root:
+    name: tuan-cli-tool
+    manifest: fixtures/tuan-root.json
+    readme: README.md
+  sub:
+    manifest: fixtures/tuan-sub.json
+    readme: README.md
+
+# provider: homebrew
+brew:
+  name: recon
+  publish: true # push an update commit to the tap repo
+  tap: wypratama/tuan-cli
+  recipe_fname: tuan-cli.rb
+  recipe_template: |
+    class Tuan < Formula
+      desc "tuan-cli"
+      homepage "http://www.example.com"
+      url "__URL__"
+      version "__VERSION__"
+      sha256 "__SHA__"
+
+      def install
+        bin.install "recon"
+      end
+    end
