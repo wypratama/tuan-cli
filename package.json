@@ -1,5 +1,5 @@
 {
-  "name": "@wypratama/tuan",
+  "name": "tuan-cli",
   "version": "0.1.0",
   "description": "CLI Program to help manage env",
   "main": "start.js",
