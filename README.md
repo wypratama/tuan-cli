@@ -12,21 +12,42 @@ A Rust-based command-line interface (CLI) program to manage your environment var
 
 ### Installation
 
-To use the Tuan CLI, you can install it via Cargo, the Rust package manager. Ensure that you have Rust installed. Then, run the following command:
+#### Via Brew
 
-bashCopy code
+```
+brew tap wypratama/tap
+brew install tuan
+```
 
-`cargo install tuan`
+#### Via Cargo
+To install via Cargo, the Rust package manager. Ensure that you have Rust installed. Then, run the following command:
+
+```
+cargo install tuan
+```
+
+### Setup
+
+Create a file named tuan.yaml in your root project containing the environment you want to setup, source (which for now is limited to git source), and branch it saved for example:
+
+```
+local:
+  source: "git@github.com:wypratama/tuan-cli"
+  branch: "env"
+```
 
 ### Commands
 
 -   **minta env**: Retrieve environment variables from a remote source.
 
-    bashCopy code
 
-    `tuan minta env --SOURCE <remote_source>`
+    `tuan minta env <remote_source>`
 
-    Replace `<remote_source>` with the desired remote source.
+    Replace `<remote_source>` with the desired remote source. example:
+
+    ```
+    tuan minta env local
+    ```
 
 
 ## Author
