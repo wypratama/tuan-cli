@@ -1,5 +1,5 @@
 {
-  "name": "tuan-cli",
+  "name": "@wypratama/tuan",
   "version": "0.1.0",
   "description": "CLI Program to help manage env",
   "main": "start.js",
@@ -13,13 +13,6 @@
   },
   "keywords": [],
   "author": "Wicaksana Pratama <wicaksanapratama@gmail.com>",
-  "license": "MIT OR Apache-2.0",
-  "files": [
-    "pre-install.js",
-    "start.js",
-    "uninstall.js",
-    "README.md",
-    "LICENSE"
-  ]
+  "license": "MIT OR Apache-2.0"
 }
     
