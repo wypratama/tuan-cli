@@ -13,6 +13,13 @@
   },
   "keywords": [],
   "author": "Wicaksana Pratama <wicaksanapratama@gmail.com>",
-  "license": "MIT OR Apache-2.0"
+  "license": "MIT OR Apache-2.0",
+  "files": [
+    "pre-install.js",
+    "start.js",
+    "uninstall.js",
+    "README.md",
+    "LICENSE"
+  ]
 }
     
