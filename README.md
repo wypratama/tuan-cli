@@ -1,4 +1,5 @@
 
+
 # Tuan CLI
 
 A Rust-based command-line interface (CLI) program to manage your environment variables efficiently.
@@ -14,15 +15,15 @@ A Rust-based command-line interface (CLI) program to manage your environment var
 
 #### Via Brew
 
-```
+```bash
 brew tap wypratama/tap
 brew install tuan
 ```
-
+If you face error after installation please refer FAQ below.
 #### Via Cargo
 To install via Cargo, the Rust package manager. Ensure that you have Rust installed. Then, run the following command:
 
-```
+```bash
 cargo install tuan
 ```
 
@@ -30,7 +31,7 @@ cargo install tuan
 
 Create a file named tuan.yaml in your root project containing the environment you want to setup, source (which for now is limited to git source), and branch it saved for example:
 
-```
+```yaml
 local:
   source: "git@github.com:wypratama/tuan-cli"
   branch: "env"
@@ -49,6 +50,11 @@ local:
     tuan minta env local
     ```
 
+### FAQ
+
+- Error **Library not loaded: /usr/local/opt/openssl@3/lib/libssl.3.dylib**
+	- Please install openssl@3 by running `brew install openssl@3`
+-
 
 ## Author
 
